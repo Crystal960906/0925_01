@@ -2,13 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>W컨셉(W CONCEPT)</title>
     <link href="css/reset.css"  rel="stylesheet">
     <link href="css/common.css"  rel="stylesheet">
     <link href="css/main.css"  rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
 
-
+    <!--MAKE IT YOURS-->
+    <script src="./js/json.js"></script>
 
 
 </head>
@@ -50,9 +54,7 @@
             <div class="select">
                 <select name="CATEGORY" class="select">
                     <option  value="CATEGORY">CATEGORY</option>
-                    <option value="나">나</option>
-                    <option value="다">다</option>
-                    <option value="라">라</option>
+
                 </select>
             </div>
 
@@ -76,38 +78,74 @@
     </header>
 
 <!--슬라이드-->
-    <div id="slider1"> <img src="img/mainbanner.jpg" alt="슬라이드"></div>
+    <div id="slidewrap">
+        <ul class="slide">
+            <li><img src="img/mainbanner.jpg" alt="슬라이드1"></li>
+            <li><img src="img/mainbanner_2.jpg" alt="슬라이드2"></li>
+            <li><img src="img/mainbanner_3.jpg" alt="슬라이드3"></li>
+        </ul>
+        <span class="prev">&lt;</span>
+        <span class="next">&gt;</span>
+    </div>
+
+<!--슬라이드 스크립트-->
+    <script>
+function prev(){
+            $('.slide li:last').prependTo('.slide');
+            $('.slide').css('margin-left', -1000);    // $('.slide').css({marginLeft:-1000}); 
+            $('.slide').stop().animate({ marginLeft: 800 },'slow' );
+        }
+
+
+
+        function next() {
+            $('.slide').stop().animate({ marginLeft: -1000 }, function () {
+                $('.slide li:first').appendTo('.slide');
+                $('.slide').css({ marginLeft: 0 });
+            });
+        }
+
+
+
+        function slide() {
+            $('.slide').stop().animate({ marginLeft: -1000 }, function () {
+                $('.slide li:first').appendTo('.slide');
+                $('.slide').css({ marginLeft: 0 });
+            });
+        }
+
+
+
+        setInterval(slide, 3000);
+
+        $('.prev').click(function () {
+            prev();
+        });
+
+
+
+        $('.next').click(function () {
+            next();
+        });
+
+    </script>
+
 <!--상품페이지-->    
     
     <section class="section1">
         <h1>STYLE STORY</h1>
         <form>
             <div class="box1">
-            <img src="img/style story1.jpg" alt="">
-            <h3>BAG&SHOED&ACC</h3>
-            <p>단3일, 베스트잡화 아이템들을</p>
-            <p>최대81%세일 혜택으로 만나보세요!</p>
             </div>
 
             <div class="box1">
-            <img src="img/style story2.jpg" alt="">
-            <h3>BUY BY BRIDE AND YOU</h3>
-            <p>매일 특별함을 선사하는 브랜드 BUY BY BRIDE AND YOU를</p>
-            <p>주말 한정 최대 70% 세일으로 만나보세요.</p>
-        </div>
+            </div>
 
             <div class="box1">
-            <img src="img/style story3.jpg" alt="">
-            <h3>SCENT BRIDE LINE UP</h3>
-            <p>최대69%세일 혜택으로 만나보는 향을 담은 뷰티 브랜드 라인업,</p>
-            <p>나를 표현하는 수많은 방법 중, '나만의 향기'로 기억속에 남겨보세요.</p>
+
             </div>
                 
             <div class="box1">
-            <img src="img/style story4.jpg" alt="">
-            <h3>Juicy Clolor Swimwear</h3>
-            <p>눈부신 태양 아래 더욱 돋보일 레트로 컬러 스팀웨어</p>
-            <p>W컨셉이 선정한 컬러풀 스팀웨어를 지금 바로 만나보세요!</p>
             </div>
         </form>
     </section>
@@ -119,38 +157,23 @@
         <form>
             <div class="box2">
                 <img src="img/what's new1.jpg" alt="">
-                <h3>JOY GRYSON</h3>
-                <p>세렌디피티 마이크로백 LW3SA1710_3COLOR</p>
-                <span>258,000</span>
+
             </div>
 
             <div class="box2-1">
                 <img src="img/what's new2.jpg" alt="">
-                <h3>MAC MOC</h3>
-                <p>[단독]크레이즈 피셔맨 </p>
-                <p>스트램 샌들 [Craze 5Color 2CM]</p>
-                <span>51,000</span>
             </div>
 
             <div class="box2">
                 <img src="img/what's new3.jpg" alt="">
-                <h3>GREYGOUND</h3>
-                <p>그레이그라운드 퍼퓸 향수 3종 택1 50ml</p>
-                <span>55,000</span>
             </div>
 
             <div class="box2">
                 <img src="img/what's new4.jpg" alt="">
-                <h3>OVLA</h3>
-                <p>[단독]solid metal ribon clip</p>
-                <span>24,500</span>
             </div>
 
             <div class="box2-1">
                 <img src="img/what's new5.jpg" alt="">
-                <h3>MOHAN</h3>
-                <p>RTR ONE SHOULDER RUFFLE SWIM SUIT_2COLORS</p>
-                <span>89,100</span>
             </div>
         </form>
     </section>
@@ -159,135 +182,104 @@
         <h1>MAEK IT YOURS</h1>
         <form>
             <div class= "box3">
-                <img src="img/make it yours1.jpg" alt="">
-                <h3>FRONTROW</h3>
-                <p>[~7/31 오전10시까지!]][23FW 프리오더]</p>
-                <p>[Premium Cashmere-blend Handmade Coat_4color]</p>
-                <span>59,200</span>
-                <button>셀럽착용</button><button>쿠폰</button>
+            </div>
+            <div class="box3">
+            </div>
+            <div class="box3">
+            </div>
+            <div class="box3">
+            </div>
+            <div class="box3">
             </div>
 
             <div class="box3">
-                <img src="img/make it yours2.png" alt="">
-                <h3>SALTWATER SANDAL</h3>
-                <p>[바로배송]</p>
-                <p>SALT WATER CLASSIC SLIDE-TAN</p>
-                <span>54,400</span>
             </div>
 
             <div class="box3">
-                <img src="img/make it yours3.jpg" alt="">
-                <h3>ourcomos</h3>
-                <p>[23SUMMER][1차:07.28.2차:08/01]</p>
-                <p>comos 836 neck twisted puff blous]</p>
-                <span>64,780</span>
-                <button>단독</button>
             </div>
 
-            <div class="box3">
-                <img src="img/make it yours4.jpg" alt="">
-                <h3>SALTWATER SANDAL</h3>
-                <p>[바로배송]<br>SALT WATER CLASSIC SLIDE-TAN</p>
-                <span>54,400</span>
-            </div>
-
-            <div class="box3">
-                <img src="img/make it yours5.jpg" alt="">
-                <h3>SALTWATER SANDAL</h3>
-                <p>[바로배송]<br>SALT WATER CLASSIC SLIDE-TAN</p>
-                <span>54,400</span>
-            </div>
-
-            <div class="box3">
-                <img src="img/make it yours6.png" alt="">
-                <h3>SALTWATER SANDAL</h3>
-                <p>[바로배송]<br>SALT WATER CLASSIC SLIDE-TAN</p>
-                <span>54,400</span>
-            </div>
-
-            <div class="box3">
-                <img src="img/make it yours7.jpg" alt="">
-                <h3>SALTWATER SANDAL</h3>
-                <p>[바로배송]<br>SALT WATER CLASSIC SLIDE-TAN</p>
-                <span>54,400</span>
-            </div>
         </form>
     </section>
 
-    <div id="slider2">
-        <h1>EXCLUSIVE</h1>
-        <div class="box1"><img src="img/exclusive.jpg" alt=""></div>
+<!--슬라이드2-->
+    <div id="slidewrap_2">
+        <ul class="slide2">
+            <li><img src="img/slide_1.jpg" alt="슬라이드1"></li>
+            <li><img src="img/slide_2.jpg" alt="슬라이드2"></li>
+            <li><img src="img/slide_3.jpg" alt="슬라이드3"></li>
+            <li><img src="img/slide_4.jpg" alt="슬라이드3"></li>
+        </ul>
+        <span class="prev">&lt;</span>
+        <span class="next">&gt;</span>
     </div>
+<!--슬라이드 스크립트-->
+    <script>
+    function prev() {
+        $('.slide2 li:last').prependTo('.slid2e');
+        $('.slide2').css('margin-left', -1000);    // $('.slide').css({marginLeft:-1000}); 
+        $('.slide2').stop().animate({ marginLeft: 800 }, 'slow');
+    }
+
+
+
+    function next() {
+        $('.slide2').stop().animate({ marginLeft: -1000 }, function () {
+            $('.slide2 li:first').appendTo('.slide2');
+            $('.slide2').css({ marginLeft: 0 });
+        });
+    }
+
+
+
+    function slide() {
+        $('.slide2').stop().animate({ marginLeft: -1000 }, function () {
+            $('.slide2 li:first').appendTo('.slide2');
+            $('.slide2').css({ marginLeft: 0 });
+        });
+    }
+
+
+
+    setInterval(slide, 3000);
+
+    $('.prev').click(function () {
+        prev();
+    });
+
+
+
+    $('.next').click(function () {
+        next();
+    });
+</script>
+
 
     <div class="section4">
         <form>
             <div class="box4">
-                <img src="img/exclusive1.jpg" alt="">
-                <h3>Febricology</h3>
-                <p>[시즌오프][~7-31까지!]</p>
-                <p>Stripe Half Sleeve Shirt_3color</p>
-                <span>72,250</span>
-                <button>단독</button>
             </div>
 
             <div class="box4">
-                <img src="img/exclusive2.jpg" alt="">
-                <h3>FRITUR</h3>
-                <p>[단독오픈]|[08/24 예약배송]</p>
-                <P>The Jacket Blue_F232JK01</P>
-                <span>348,000</span>
-                <button>예약상품</button>
-                <button>단독</button>
             </div>
 
             <div class="box4">
-                <img src="img/exclusive3.png" alt="">
-                <h3>EENK</h3>
-                <p>[장바구니BEST] 클리어런스 | 기간한정</p>
-                <P>WOUI Long Sleev Cutout Jersey</P>
-                <p>T-shirt-Navy/Ivory Stripe</p>
-                <span>262,400</span>
-                <button>셀럽착용</button>
             </div>
 
             <div class="box4">
-                <img src="img/exclusive4.jpg" alt="">
-                <h3>P/a by PAUL & ALICE</h3>
-                <p>CHECK LONG DRESS_5COLORS</p>
-                <span>80,750</span>
-                <button>단독</button>
             </div>
 
             <div class="box4">
-                <img src="img/exclusive5.jpg" alt="">
-                <h3>LE17SEPTEMBRE</h3>
-                <p>[한정특가]SLEEVELESS RIBBED KNIT</p>
-                <p>CROP TOP[NAVY]</p>
-                <span>111,2000</span>
-                <button>단독</button>
             </div>
 
             <div class="box4">
-                <img src="img/exclusive6.jpg" alt="">
-                <h3>JOORTI</h3>
-                <p>[베스트브랜드][72H POP-UP]</p>
-                <p>[세트] 리본튤립 블라우스</p>
-                <p>셔링스커트 레드</p>
-                <span>100,750</span>
-                
             </div>
 
             <div class="box4">
-                <img src="img/exclusive7.jpg" alt="">
-                <h3>FLOWOOM</h3>
-                <p>[Blue]S.L Cream S,M,L pink</p>
-                <P>cup cake dress</P>
-                <span>328,000</span>
-                <button>예약상품</button>
-                <button>단독</button>
             </div>
         </form>
     </div>
+
+
 
     <section>   
     <div class="section5">
@@ -295,76 +287,34 @@
         <div class="beauty"><img src="img/beautypick.jpg" alt=""></div>
         <div class="list">
             <ul>
-                <li><img src="img/beautypick1.jpg" alt="">
-                    <h3>Odid</h3>
-                    <p>[뷰티특가]</p>
-                    <p>오디드 쿨라임 아크네 클렌징폼</p>
-                    <p>150ml</p>
-                    <span>9,900</span>
+                <li>
                 </li>
 
-                <li><img src="img/beautypick2.jpg" alt="">
-                    <h3>DEEPERENCE</h3>
-                    <p>[뷰티특가]</p>
-                    <p>[선물포장]다크시나몬</p>
-                    <p>헤어 오일 에센스 120ml+스카프 괄사</p>
-                    <span>26,910</span>
+                <li>
                 </li>
 
-                <li><img src="img/beautypick3.jpg" alt="">
-                    <h3>AIDA</h3>
-                    <p>[뷰티특가]</p>
-                    <p>프로폴리스 바이옴 마스크</p>
-                    <p>카밍에너지 3BOX(15매)</p>
-                    <span>67,900</span>
+                <li>
                 </li>
 
-                <li><img src="img/beautypick4.jpg" alt="">
-                    <h3>milktouch</h3>
-                    <p>[뷰티특가]</p>
-                    <p>밀크터치 올데이 슈퍼 멜팅</p>
-                    <p>마스카라 리무버</p>
-                    <span>9,900</span>
+                <li>
                 </li>
 
-                <li><img src="img/beautypick5.jpg" alt="">
-                    <h3>riempi</h3>
-                    <p>[뷰티특가]</p>
-                    <p>리엠피 녹차수 70% </p>
-                    <p>탈모 헤어 토닉 앰플110ml</p>
-                    <span>9,900</span>
-                </li>
-                <li><img src="img/beautypick6.jpg" alt="">           
-                    <h3>I'M</h3>
-                    <p>[뷰티특가]</p>
-                    <p>마사지젤 아임워터젤</p>
-                    <span>9,900</span>
-                </li>
-                <li><img src="img/beautypick7.png" alt="">           
-                    <h3>pesade</h3>
-                    <p>인 하인드사이드 오드 퍼퓸 100ml</p>
-                    <span>134,000</span>
+                <li>
                 </li>
 
-                <li><img src="img/beautypick8.jpg" alt="">
-                    <h3>elop</h3>
-                    <p>[뷰티특가]</p>
-                    <p>[1+1]폰드 핸드크림50ml</p>
-                    <span>9,900</span>
+                <li>
                 </li>
 
-                <li><img src="img/beautypick9.jpg" alt="">
-                    <h3>FEEV</h3>
-                    <p>[뷰티특가]</p>
-                    <p>하이퍼 핏 컬러 드롭(8color)</p>
-                    <span>9,900</span>
+                <li>
                 </li>
 
-                <li><img src="img/beautypick10.jpg" alt="">
-                    <h3>One-day's You</h3>
-                    <p>[뷰티특가]</p>
-                    <p>프로 바이타 씨 앰플 미스트 100ml</p>
-                    <span>8,910</span>
+                <li>
+                </li>
+
+                <li>
+                </li>
+
+                <li>
                 </li>    
             </ul>
         </div>
