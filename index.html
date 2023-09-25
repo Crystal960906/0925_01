@@ -10,9 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
-
-    <!--MAKE IT YOURS-->
     <script src="./js/json.js"></script>
+
 
 
 </head>
@@ -20,8 +19,8 @@
 <!--헤더-->
     <header>
         <div id="header_box1"><a hrf=""><img src="img/banner_top.jpg" alt="상단배너"></a></div>
-        <div id="header_box2">
-            <div id="header_box2-1"><img src="img/logo.svg" alt="로고"></div>
+            <div id="header_box2"><a href="index.html">
+                <div id="header_box2-1"><img src="img/logo.svg" alt="로고"></a></div>
 
             <div id="header_box2-2">
                 <div>
@@ -48,87 +47,102 @@
                 <hr>
             </div>
         </div>    
+        <nav>
+            <div class="main_menu">
+                <ul class="menu">
+                    <li><a href="sub.html">WOMAN</a>
+                        <ul class="sub">
+                            <li><a href="sub.html">아우터</a></li>
+                            <li><a href="sub.html">원피스</a></li>
+                            <li><a href="sub.html">블라우스</a></li>
+                            <li><a href="sub.html">셔츠</a></li>
+                            <li><a href="sub.html">티셔츠</a>
+                            <li><a href="sub.html">니트</a>
+                            <li><a href="sub.html">스커트</a>
+                            <li><a href="sub.html">팬츠</a>
+                            <li><a href="sub.html">데님</a>
+                        </ul>    
+                    </li>
+                    <li><a href="sub.html">MAN</a>
+                        <ul class="sub">
+                            <li><a href="sub.html">아우터</a></li>
+                            <li><a href="sub.html">셔츠</a></li>
+                            <li><a href="sub.html">슈즈</a></li>
+                            <li><a href="sub.html">ACC</a></li>
+                        </ul>     
+                    </li>
+            
+                    <li><a href="sub.html">BEAUTY</a>
+                        <ul class="sub">
+                            <li><a href="sub.html">스킨토너</a></li>
+                            <li><a href="sub.html">메이크업</a></li>
+                            <li><a href="sub.html">헤어&바디</a></li>
+                        </ul>
+                    </li>
 
+                    <li><a href="sub.html">LIFE</a>
+                        <ul class="sub">
+                            <li><a href="sub.html">홈</a></li>
+                            <li><a href="sub.html">트래블</a></li>
+                            <li><a href="sub.html">디지털</a></li>
+                            <li><a href="sub.html">컬쳐</a></li>
+                            <li><a href="sub.html">푸드</a></li>
+                        </ul>
 
-        <div id="header_box3">
-            <div class="select">
-                <select name="CATEGORY" class="select">
-                    <option  value="CATEGORY">CATEGORY</option>
-
-                </select>
-            </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="sub.html"><b>NEW</b></a></li>
-                    <li><a href="sub.html"><b>MEN</b></a></li>
-                    <li><a href="sub.html"><b>WOMEN</b></a></li>
-                    <li><a href="sub.html"><b>BEAUTY</b></a></li>
-                    <li><a href="sub.html"><b>LIFE</b></a></li>
-                    <li><a href="sub.html"><b>SALE</b></a></li>
-                    <li><a href="sub.html"><b>DESIGNER</b></a></li>
-                    <li><a href="sub.html"><pre>  |  </pre></a></li>
-                    <li><a href="sub.html"><b>PRE-SHOW</b></a></li>
-                    <li><a href="sub.html"><b>ORIGINAL</b></a></li>
-                    <li><a href="sub.html"><b>EVENT</b></a></li>
-                    <li><a href="sub.html"><b>BEST</b></a></li>
+                    <li><a href="sub.html">|　　　DESIGNER　</a></li>
+                    <li><a href="sub.html">PRE_SHOW</a></li>
+                    <li><a href="sub.html">EVENT</a></li>
+                    <li><a href="sub.html">BEST</a></li>
                 </ul>
             </div>
-        </div>
+        </nav>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+        <script>
+            $(function () {
+                $('.menu > li').mouseover(function () {
+                    $(this).children('.sub').stop().slideDown();
+                }).mouseout(function () {
+                    $('.sub').stop().slideUp();
+                });
+            });
+        </script>
+
     </header>
 
 <!--슬라이드-->
-    <div id="slidewrap">
-        <ul class="slide">
-            <li><img src="img/mainbanner.jpg" alt="슬라이드1"></li>
-            <li><img src="img/mainbanner_2.jpg" alt="슬라이드2"></li>
-            <li><img src="img/mainbanner_3.jpg" alt="슬라이드3"></li>
-        </ul>
-        <span class="prev">&lt;</span>
-        <span class="next">&gt;</span>
-    </div>
+<div id="slidewrap">
+    <ul class="slide">
+        <li><img src="img/mainbanner.jpg"
+                alt="slide image"></li>
+        <li><img src="img/mainbanner_2.jpg"
+                alt="slide image"></li>
+        <li><img src="img/mainbanner_3.jpg"
+                alt="slide image"></li>
+    </ul>
+</div>
+</div>
+<script>
+    //slider
+    var i = 0;
 
-<!--슬라이드 스크립트-->
-    <script>
-function prev(){
-            $('.slide li:last').prependTo('.slide');
-            $('.slide').css('margin-left', -1000);    // $('.slide').css({marginLeft:-1000}); 
-            $('.slide').stop().animate({ marginLeft: 800 },'slow' );
+
+
+    function slide() {
+        i++;
+        if (i > $('.slide li:last').index()) {
+            i = 0;
         }
+        $('.slide li').eq(i).stop().fadeIn('slow');
+        $('.slide li').eq(i - 1).stop().fadeOut();
+    }
+
+    setInterval(slide, 3000);
+</script>
 
 
 
-        function next() {
-            $('.slide').stop().animate({ marginLeft: -1000 }, function () {
-                $('.slide li:first').appendTo('.slide');
-                $('.slide').css({ marginLeft: 0 });
-            });
-        }
 
-
-
-        function slide() {
-            $('.slide').stop().animate({ marginLeft: -1000 }, function () {
-                $('.slide li:first').appendTo('.slide');
-                $('.slide').css({ marginLeft: 0 });
-            });
-        }
-
-
-
-        setInterval(slide, 3000);
-
-        $('.prev').click(function () {
-            prev();
-        });
-
-
-
-        $('.next').click(function () {
-            next();
-        });
-
-    </script>
 
 <!--상품페이지-->    
     
@@ -202,56 +216,39 @@ function prev(){
     </section>
 
 <!--슬라이드2-->
-    <div id="slidewrap_2">
-        <ul class="slide2">
-            <li><img src="img/slide_1.jpg" alt="슬라이드1"></li>
-            <li><img src="img/slide_2.jpg" alt="슬라이드2"></li>
-            <li><img src="img/slide_3.jpg" alt="슬라이드3"></li>
-            <li><img src="img/slide_4.jpg" alt="슬라이드3"></li>
-        </ul>
-        <span class="prev">&lt;</span>
-        <span class="next">&gt;</span>
-    </div>
+<div id="slidewrap2">
+    <h3>EXCLUSIVE +</h3>
+    <ul class="slide2">
+        <li><img src="img/slide_1.jpg"
+                alt="slide image"></li>
+        <li><img src="img/slide_2.jpg"
+                alt="slide image"></li>
+        <li><img src="img/slide_3.jpg"
+                alt="slide image"></li>
+    </ul>
+</div>
+</div>
+    
+    </section>
 <!--슬라이드 스크립트-->
-    <script>
-    function prev() {
-        $('.slide2 li:last').prependTo('.slid2e');
-        $('.slide2').css('margin-left', -1000);    // $('.slide').css({marginLeft:-1000}); 
-        $('.slide2').stop().animate({ marginLeft: 800 }, 'slow');
+<script>
+    //slider
+    var i = 0;
+
+
+
+    function slide2() {
+        i++;
+        if (i > $('.slide2 li:last').index()) {
+            i = 0;
+        }
+        $('.slide2 li').eq(i).stop().fadeIn('slow');
+        $('.slide2 li').eq(i - 1).stop().fadeOut();
     }
 
-
-
-    function next() {
-        $('.slide2').stop().animate({ marginLeft: -1000 }, function () {
-            $('.slide2 li:first').appendTo('.slide2');
-            $('.slide2').css({ marginLeft: 0 });
-        });
-    }
-
-
-
-    function slide() {
-        $('.slide2').stop().animate({ marginLeft: -1000 }, function () {
-            $('.slide2 li:first').appendTo('.slide2');
-            $('.slide2').css({ marginLeft: 0 });
-        });
-    }
-
-
-
-    setInterval(slide, 3000);
-
-    $('.prev').click(function () {
-        prev();
-    });
-
-
-
-    $('.next').click(function () {
-        next();
-    });
+    setInterval(slide2, 1000);
 </script>
+
 
 
     <div class="section4">

@@ -2,78 +2,112 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>W컨셉(W CONCEPT)</title>
     <link href="css/reset.css"  rel="stylesheet">
-    <link href="css/common.css"  rel="stylesheet">
     <link href="css/sub.css"  rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <script src="./js/json.js"></script>
     
-
-
-
-
 </head>
+
 <body>
 <!--헤더-->
-    <header>
-        <div id="header_box1"><a hrf=""><img src="img/banner_top.jpg" alt="상단배너"></a></div>
-        <div id="header_box2">
-            <div id="header_box2-1"><a href="index.html"><img src="img/logo.svg" alt="로고"></a></div>
+<header>
+    <div id="header_box1"><a href="index.html"><img src="img/banner_top.jpg" alt="상단배너"></a></div>
+    <div id="header_box2"><a href="index.html">
+        <div id="header_box2-1"><img src="img/logo.svg" alt="로고"></a></div>
 
-            <div id="header_box2-2">
-                <div>
-                    <img src="img/join.svg" alt="">
-                    <span>JOIN</span>
-                </div>
-                <div>
-                    <img src="img/login.svg" alt="">
-                    <span>LOGIN</span>
-                </div>
-                <div>
-                    <img src="img/my.svg" alt="">
-                    <span>MY</span>
-                </div>
-                <div>
-                    <img src="img/0.svg" alt="">
-                    <span>0 </span>
-                </div>
+        <div id="header_box2-2">
+            <div>
+                <img src="img/join.svg" alt="">
+                <span>JOIN</span>
             </div>
-
-            <div id="header_box2-3">
-                <input type="text" placeholder="썸머 마지막 '클리어런스'세일을 검색하세요.">
-                    <div class="imgbox"><img src="img/magnifier.png"alt=""></div>
-                <hr>
+            <div>
+                <img src="img/login.svg" alt="">
+                <span>LOGIN</span>
             </div>
-        </div>    
-
-
-        <div id="header_box3">
-            <div class="select">
-                <select name="CATEGORY" class="select">
-                    <option  value="CATEGORY">CATEGORY</option>
-                    <option value="나">나</option>
-                    <option value="다">다</option>
-                    <option value="라">라</option>
-                </select>
+            <div>
+                <img src="img/my.svg" alt="">
+                <span>MY</span>
             </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="#"><b>NEW</b></a></li>
-                    <li><a href="#"><b>MEN</b></a></li>
-                    <li><a href="#"><b>WOMEN</b></a></li>
-                    <li><a href="#"><b>BEAUTY</b></a></li>
-                    <li><a href="#"><b>LIFE</b></a></li>
-                    <li><a href="#"><b>SALE</b></a></li>
-                    <li><a href="#"><b>DESIGNER</b></a></li>
-                    <li><a href="#"><pre>  |  </pre></a></li>
-                    <li><a href="#"><b>PRE-SHOW</b></a></li>
-                    <li><a href="#"><b>ORIGINAL</b></a></li>
-                    <li><a href="#"><b>EVENT</b></a></li>
-                    <li><a href="#"><b>BEST</b></a></li>
-                </ul>
+            <div>
+                <img src="img/0.svg" alt="">
+                <span>0 </span>
             </div>
         </div>
-    </header>
+
+        <div id="header_box2-3">
+            <input type="text" placeholder="썸머 마지막 '클리어런스'세일을 검색하세요.">
+                <div class="imgbox"><img src="img/magnifier.png"alt=""></div>
+            <hr>
+        </div>
+    </div>    
+    <nav>
+        <div class="main_menu">
+            <ul class="menu">
+                <li><a href="sub.html">WOMAN</a>
+                    <ul class="sub">
+                        <li><a href="sub.html">아우터</a></li>
+                        <li><a href="sub.html">원피스</a></li>
+                        <li><a href="sub.html">블라우스</a></li>
+                        <li><a href="sub.html">셔츠</a></li>
+                        <li><a href="sub.html">티셔츠</a>
+                        <li><a href="sub.html">니트</a>
+                        <li><a href="sub.html">스커트</a>
+                        <li><a href="sub.html">팬츠</a>
+                        <li><a href="sub.html">데님</a>
+                    </ul>    
+                </li>
+                <li><a href="sub.html">MAN</a>
+                    <ul class="sub">
+                        <li><a href="sub.html">아우터</a></li>
+                        <li><a href="sub.html">셔츠</a></li>
+                        <li><a href="sub.html">슈즈</a></li>
+                        <li><a href="sub.html">ACC</a></li>
+                    </ul>     
+                </li>
+        
+                <li><a href="sub.html">BEAUTY</a>
+                    <ul class="sub">
+                        <li><a href="sub.html">스킨토너</a></li>
+                        <li><a href="sub.html">메이크업</a></li>
+                        <li><a href="sub.html">헤어&바디</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="sub.html">LIFE</a>
+                    <ul class="sub">
+                        <li><a href="sub.html">홈</a></li>
+                        <li><a href="sub.html">트래블</a></li>
+                        <li><a href="sub.html">디지털</a></li>
+                        <li><a href="sub.html">컬쳐</a></li>
+                        <li><a href="sub.html">푸드</a></li>
+                    </ul>
+
+                <li><a href="sub.html">|　　　DESIGNER　</a></li>
+                <li><a href="sub.html">PRE_SHOW</a></li>
+                <li><a href="sub.html">EVENT</a></li>
+                <li><a href="sub.html">BEST</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.menu > li').mouseover(function () {
+                $(this).children('.sub').stop().slideDown();
+            }).mouseout(function () {
+                $('.sub').stop().slideUp();
+            });
+        });
+    </script>
+
+</header>
 
 
 <!--상단 메뉴바-->  

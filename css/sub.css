@@ -1,7 +1,30 @@
-@charset"utf-8";
+@charset "utf-8";
+* {margin:0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;}
 
-    *{margin:0; box-sizing: border-box;}   
-    #sub {width:1313px; height:11900px; margin:0 auto; background-color:white; padding:30px;}
+ul,li,ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans KR', sans-serif;
+}
+
+nav {
+        float: left;
+        margin: 50px 0 0 0px;
+}
+
+a {
+        text-decoration: none;
+        color: #666;
+}
+
+    #sub {width:1313px; 
+        height:auto; 
+        margin: 10x 0 0 0; 
+        padding:30px;
+        position: relative;
+        z-index: 1;
+} 
 
     #submenu {width:1240px; height:50px; background-color:white; }
     #submenu > ul {width:1240px; height:20px; background-color: white;}

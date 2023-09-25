@@ -7,9 +7,10 @@
 
         header {
             width:100%; 
-            height: 280px; 
+            height: 200px; 
             border-bottom:1px solid #ddd; 
-            background-color: #e4e6e5;
+            position: relative;
+
         }
         #header_box1 {
             width:100%; 
@@ -17,11 +18,12 @@
             cursor: pointer;
             display: flex;
             justify-content: center;
+            
         }
         #header_box1 > img {width:100%; height:100%;}
 
         #header_box2 {width:100%; height:80px; background-color: white; margin:0 auto;}
-        #header_box2-1 {width:180px; height:60px; float: left; margin:10px; cursor: pointer;}
+        #header_box2-1 > a {width:180px; height:60px; float: left; margin:40px 0 0 10px; cursor: pointer;}
         #header_box2-1 > img {width:100%; height:100%}
         
         #header_box2-2 {width:250px; height:80px; background-color: white; float: right; cursor: pointer}
@@ -30,19 +32,78 @@
         #header_box2-2 > div > span {font-size: 13px;}
 
         #header_box2-3 {width:330px; height:44px; background-color:white; margin:0 auto; }
-        #header_box2-3 > input {width:300px; height:44px;border-color: transparent; font-size: 15px; font-weight: 450;}
+        #header_box2-3 > input {width:300px; height:44px;border-color: transparent; font-size: 13px; font-weight: 450;}
         #header_box2-3 > .imgbox {width:22px; height:22px;background-color:white; float: right; margin:10px 0 0 0;cursor: pointer}
         #header_box2-3 > .imgbox > img {width:100%; height:100%}
         
 
-        #header_box3 {width:100%; height:100px; background-color: white; margin:0 auto;}
-        #header_box3 > .select > select {width:150px; height:30px; ; float:left; font-size: 12px; font-weight: bold; font-family: 'Heebo', sans-serif;
-        margin: 0 0 0 10px; font-size: 15px;}
-        
-        #header_box3 > .menu {width:900px; height:60px; float: right; margin:0 550px 0 0px; }
-        #header_box3 > .menu > ul { float:left; margin: 10px 0px;}
-        #header_box3 > .menu > ul > li {float: left; font-size: 14px; margin:8px;}
-        #header_box3 > .menu > ul > li > a { font-family: 'Heebo', sans-serif; color:black; cursor: pointer; font-weight:bold; font-size: 16px;}
+/*메뉴 바*/
+    nav{
+        width:100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        position:absolute;
+        z-index: 13;
+        top:130px;
+    }
+
+
+        .menu { 
+            float: left; 
+            width: 1000px;
+            display: flex;
+
+
+        }
+
+        .menu > li {
+            float:left; 
+            width:15%; 
+            height: 30px;
+            text-align: center; 
+            transition:all 0.5s ease;
+            line-height: 40px;
+            margin: -40px 0 0 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 800;
+        }
+
+            
+            
+
+        .menu > li > a {
+            color: #000;
+            font-size: 13px;
+            font-weight: 800;
+
+        }
+        .menu > li:hover > a {color:#000;}
+        .menu > li:hover {background-color: #fff;}
+        .sub {background-color:#fff; display: none; opacity: 0.8;}
+        .sub > li {transition: all 0.5s ease;   font-weight: 400;}
+        .sub > li > a {
+            font-size: 14px;
+        }
+        .sub > li > a:hover {background-color: #ddd; display: block; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         #footer {
